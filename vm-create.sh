@@ -57,8 +57,6 @@ az vm run-command invoke \
    --command-id RunShellScript \
    --scripts "sudo apt-get update && sudo apt-get install -y nginx"
 
-az vm list-ip-addresses -g RG -n VM_Name
-
 #Get VM public ip
 Ip=$(az vm show -d -g $RG -n $VM_Name --query publicIps -o tsv)
 
