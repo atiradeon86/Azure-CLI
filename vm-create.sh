@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#Example
+# wget https://raw.githubusercontent.com/atiradeon86/Azure-CLI/main/vm-create.sh
+# chmod +x vm-create.sh && bash vm-create.sh
+
 #Azure CLI install
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
