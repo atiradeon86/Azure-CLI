@@ -3,13 +3,13 @@
 #Azure CLI install
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
-#Upload SSH Key + change -ssh-key-name
+#Upload your SSH Key
 
 #Data setup
 
 VM_Name="bryan-httpd";
 RG="RG-user06";
-Admin="ati";
+Admin="bryan";
 Vnet_Name="Bryan-vnet";
 Subnet="httpd";
 Public_Ip_Name="az-cli-vm-httpd-public"
@@ -59,4 +59,4 @@ az vm list-ip-addresses -g RG -n VM_Name
 Ip=$(az vm show -d -g $RG -n $VM_Name --query publicIps -o tsv)
 
 #SSH Connect string
-echo ssh -i Bryan-SSH "$Admin@$Ip"
+echo ssh -i $SSH_Key_Name "$Admin@$Ip"
