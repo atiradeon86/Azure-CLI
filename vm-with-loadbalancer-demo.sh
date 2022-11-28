@@ -2,8 +2,11 @@
 backendpool=("")
 
 #Base Settings
-RG="Bryan";
+RG="RG-user06";
 Admin="bryan";
+
+#Set default ResourceGroup
+az configure --defaults group=$RG
 
 Vnet_Name="bryan-vnet";
 Subnet="bryan-subnet";
@@ -39,9 +42,6 @@ echo "VM Createing $i ..."
 
 VM_Name="bryan-testing-$i"
 Public_Ip_Name="pm-testing$i"
-
-#Set default ResourceGroup
-az configure --defaults group=$RG
 
 #Check
 az config get
