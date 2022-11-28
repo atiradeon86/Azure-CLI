@@ -123,7 +123,7 @@ cmd="az network lb address-pool update --name $ap --lb-name $LB_Name --vnet $Vne
 
 eval $cmd
 
-#Add Load balance rule
+#Add Healtprobe
 echo "Create Healtprobe"
 
 az network lb probe create --name $LB_Healtprobe \
@@ -133,7 +133,7 @@ az network lb probe create --name $LB_Healtprobe \
 --interval 7 \
 --threshold 3
 
-# Load balance rule
+# Add Load balance rule
 echo "Create Load balance rule"
 
 az network lb rule create --name $LB_Loadbalance_rule \
